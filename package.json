@@ -1,0 +1,25 @@
+{
+  "name": "using-the-music-of-3blue1brown",
+  "version": "1.0.0",
+  "homepage": "https://vincerubinetti.github.io/using-the-music-of-3blue1brown/",
+  "dependencies": {
+    "formik": "^2.1.5",
+    "formik-persist": "^1.1.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.1",
+    "yup": "^0.29.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build"
+  },
+  "browserslist": [
+    ">0.1%",
+    "not dead"
+  ],
+  "devDependencies": {
+    "eslint-config-rubinetti": "git+https://git@github.com/vincerubinetti/eslint-config-rubinetti.git",
+    "prettier-config-rubinetti": "git+https://git@github.com/vincerubinetti/prettier-config-rubinetti.git"
+  }
+}
