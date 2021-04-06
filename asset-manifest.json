@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/using-the-music-of-3blue1brown/static/css/main.bf179f43.chunk.css",
+    "main.js": "/using-the-music-of-3blue1brown/static/js/main.4c2c578c.chunk.js",
+    "main.js.map": "/using-the-music-of-3blue1brown/static/js/main.4c2c578c.chunk.js.map",
+    "runtime-main.js": "/using-the-music-of-3blue1brown/static/js/runtime-main.1c5cd89e.js",
+    "runtime-main.js.map": "/using-the-music-of-3blue1brown/static/js/runtime-main.1c5cd89e.js.map",
+    "static/js/2.1a15dfb2.chunk.js": "/using-the-music-of-3blue1brown/static/js/2.1a15dfb2.chunk.js",
+    "static/js/2.1a15dfb2.chunk.js.map": "/using-the-music-of-3blue1brown/static/js/2.1a15dfb2.chunk.js.map",
+    "index.html": "/using-the-music-of-3blue1brown/index.html",
+    "precache-manifest.892a0df4b207f8c5d9666658b23e72af.js": "/using-the-music-of-3blue1brown/precache-manifest.892a0df4b207f8c5d9666658b23e72af.js",
+    "service-worker.js": "/using-the-music-of-3blue1brown/service-worker.js",
+    "static/css/main.bf179f43.chunk.css.map": "/using-the-music-of-3blue1brown/static/css/main.bf179f43.chunk.css.map",
+    "static/js/2.1a15dfb2.chunk.js.LICENSE.txt": "/using-the-music-of-3blue1brown/static/js/2.1a15dfb2.chunk.js.LICENSE.txt",
+    "static/media/app.css": "/using-the-music-of-3blue1brown/static/media/logo.d2e5f628.png",
+    "static/media/loading.2bdb69bb.svg": "/using-the-music-of-3blue1brown/static/media/loading.2bdb69bb.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1c5cd89e.js",
+    "static/js/2.1a15dfb2.chunk.js",
+    "static/css/main.bf179f43.chunk.css",
+    "static/js/main.4c2c578c.chunk.js"
+  ]
+}
