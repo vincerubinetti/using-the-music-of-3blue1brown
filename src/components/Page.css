@@ -1,0 +1,25 @@
+h2 {
+  margin: 0;
+  text-align: center;
+  font-size: 1.35rem;
+  font-weight: 600;
+  overflow-wrap: break-word;
+}
+
+.description {
+  font-style: italic;
+}
+
+.error {
+  color: var(--red);
+  font-size: 0.85em;
+  font-style: italic;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 20px 0;
+}
