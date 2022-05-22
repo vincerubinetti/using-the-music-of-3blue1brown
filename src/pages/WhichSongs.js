@@ -23,6 +23,7 @@ const songs = [
   "Endpoint",
   "Fractals",
   "Occlusion",
+  "Fives",
 ];
 
 // which songs page
