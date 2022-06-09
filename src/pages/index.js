@@ -37,6 +37,11 @@ export const validationSchema = object().shape(schema);
 
 // if on last question to answer
 export const isLast = (page, values) => {
-  if (values.categories.find((cat) => cat.includes("video"))) return page === 8;
+  if (
+    values.categories.find(
+      (cat) => cat.includes("video") || cat.includes("SoME")
+    )
+  )
+    return page === 8;
   else return page === 6;
 };

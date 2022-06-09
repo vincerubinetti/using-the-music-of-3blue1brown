@@ -18,7 +18,9 @@ const initialValue = "";
 
 const validation = string().when("categories", {
   is: (selectedCategories) =>
-    selectedCategories.find((cat) => cat.includes("video")),
+    selectedCategories.find(
+      (cat) => cat.includes("video") || cat.includes("SoME")
+    ),
   then: (schema) =>
     schema.required("Required").min(4, "Please write your full channel name"),
 });

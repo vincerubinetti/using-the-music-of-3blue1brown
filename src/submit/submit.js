@@ -16,6 +16,7 @@ export const submit = async (values) => {
 // determine "level" of use based on form answers
 export const getLevel = ({ categories, subscribers }) => {
   const evaluateCategory = (category) => {
+    if (category.includes("SoME")) return 1;
     if (category.includes("student")) return 1;
     if (category.includes("teacher")) return 1;
     if (category.includes("video")) {
@@ -60,9 +61,11 @@ export const sendEmail = async ({ name, email, level, message }) => {
   };
 
   try {
+    // fake success when testing locally
+    if (process.env.NODE_ENV === "development") return true;
+
     // make request
     const response = await (await fetch(emailSender, options)).text();
-    // let response = "success";
 
     // debug
     console.groupCollapsed("Email response");
