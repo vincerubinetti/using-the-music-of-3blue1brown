@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/using-the-music-of-3blue1brown/static/css/main.bf5b9d8d.css",
-    "main.js": "/using-the-music-of-3blue1brown/static/js/main.2b41a58f.js",
+    "main.js": "/using-the-music-of-3blue1brown/static/js/main.23a6748c.js",
     "static/media/logo.svg": "/using-the-music-of-3blue1brown/static/media/logo.4524405723a92da718baa6df74ee44ae.svg",
     "index.html": "/using-the-music-of-3blue1brown/index.html",
     "static/media/loading.svg": "/using-the-music-of-3blue1brown/static/media/loading.bfef90e300eb0a67815188ddabc21f58.svg",
     "static/media/checkbox.svg": "/using-the-music-of-3blue1brown/static/media/checkbox.a8bacb9f0014ed935df6.svg",
     "main.bf5b9d8d.css.map": "/using-the-music-of-3blue1brown/static/css/main.bf5b9d8d.css.map",
-    "main.2b41a58f.js.map": "/using-the-music-of-3blue1brown/static/js/main.2b41a58f.js.map"
+    "main.23a6748c.js.map": "/using-the-music-of-3blue1brown/static/js/main.23a6748c.js.map"
   },
   "entrypoints": [
     "static/css/main.bf5b9d8d.css",
-    "static/js/main.2b41a58f.js"
+    "static/js/main.23a6748c.js"
   ]
 }
