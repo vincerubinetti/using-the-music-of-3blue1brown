@@ -46,7 +46,7 @@ const Requirements1 = () => (
     <br />
     Stream the music on Spotify:
     <br />
-    https://open.spotify.com/album/1dVyjwS8FBqXhRunaG5W5u
+    https://open.spotify.com/playlist/3zNK20qC96mVSww60lVi1k
     <br />
     <br />
     If you have any questions, reply to this message. If your use case ever
