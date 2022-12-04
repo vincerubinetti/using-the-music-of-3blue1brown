@@ -1,0 +1,24 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Install packages
+        run: yarn install
+      - name: Build app
+        run: yarn build
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          keep_files: false
+          publish_branch: gh-pages
+          publish_dir: build
+          github_token: ${{ secrets.GITHUB_TOKEN }}
