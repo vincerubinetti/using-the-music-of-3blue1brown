@@ -9,6 +9,7 @@ import * as Categories from "./Categories";
 import * as Channel from "./Channel";
 import * as Subscribers from "./Subscribers";
 import * as ThankYou from "./ThankYou";
+import { load } from "../persist";
 
 // ordered array of pages with their props
 export const pages = [
@@ -25,9 +26,10 @@ export const pages = [
 ];
 
 // make hash map of initial values from each page for formik
-export const initialValues = {};
+export const initialValues = load();
 for (const { key, initialValue } of pages)
-  if (initialValue !== undefined) initialValues[key] = initialValue;
+  if (initialValues[key] === undefined && initialValue !== undefined)
+    initialValues[key] = initialValue;
 
 // make hash map of validation schemas from each page for formik
 const schema = {};

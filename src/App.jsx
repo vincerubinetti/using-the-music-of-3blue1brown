@@ -4,6 +4,7 @@ import Controller from "./components/Controller";
 import { pages, initialValues, validationSchema } from "./pages";
 import { submit } from "./submit/submit";
 import "./App.css";
+import log from "./debug";
 
 export const AppContext = createContext({});
 
@@ -15,10 +16,7 @@ const App = () => {
 
   // when form is submitted
   const submitForm = async (values) => {
-    // debug
-    console.groupCollapsed("Submitting form");
-    console.log(values);
-    console.groupEnd();
+    log("Submitting form", values);
 
     // set loading spinner
     setSubmitting(true);

@@ -1,4 +1,5 @@
 import { renderToString } from "react-dom/server";
+import log from "../debug";
 import Message from "./Message";
 
 // form submission logic
@@ -8,6 +9,8 @@ export const submit = async (values) => {
 
   // render html string to be put in body of response email
   const message = renderToString(<Message level={level} values={values} />);
+
+  log(message);
 
   // send email
   return sendEmail({ ...values, level, message });
@@ -22,14 +25,14 @@ export const getLevel = ({ categories, subscribers }) => {
     if (category.includes("video")) {
       if (subscribers.includes("<")) return 1;
       if (subscribers.includes("to")) return 2;
-      return 4;
+      return 3;
     }
-    if (category.includes("company")) return 3;
-    if (category.includes("online")) return 3;
-    if (category.includes("live")) return 4;
-    if (category.includes("film")) return 4;
-    if (category.includes("other")) return 4;
-    return 4;
+    if (category.includes("company")) return 2;
+    if (category.includes("online")) return 2;
+    if (category.includes("live")) return 3;
+    if (category.includes("film")) return 3;
+    if (category.includes("other")) return 3;
+    return 3;
   };
 
   // return highest (most restrictive) level category that user checked
@@ -67,15 +70,12 @@ export const sendEmail = async ({ name, email, level, message }) => {
     // make request
     const response = await (await fetch(emailSender, options)).text();
 
-    // debug
-    console.groupCollapsed("Email response");
-    console.log(response);
-    console.groupEnd();
+    log("Email response", response);
 
     // return success based on whether php returns string with "success"
     return response.includes("success");
   } catch (error) {
-    console.log(error);
+    log(error);
     return false;
   }
 };

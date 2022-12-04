@@ -8,8 +8,7 @@ const Response = ({ level, values }) => (
     {level === 1 && <Requirements1 />}
     {level === 2 && <Requirements2 />}
     {level === 3 && <Requirements3 />}
-    {level === 4 && <Requirements4 />}
-    {(level === 2 || level === 3) && <Faqs />}
+    {level === 2 && <Faqs />}
     <Answers {...values} />
     <ThankYou />
   </>
@@ -81,28 +80,6 @@ const Requirements2 = () => (
 
 // requirements (level 3) section of email
 const Requirements3 = () => (
-  <>
-    <b>———&nbsp; Requirements &nbsp;———</b>
-    <br />
-    <br />
-    $150 USD <i>per song</i>, for one use
-    <br />
-    $300 USD <i>per song</i>, for unlimited uses
-    <br />
-    <br />
-    <a href="https://www.paypal.me/VincentRubinetti">Send with PayPal</a> or
-    reply to arrange a different method.
-    <br />
-    <br />
-    If you have any questions, reply to this message. If your use case ever
-    changes in the future, please contact me again.
-    <br />
-    <br />
-  </>
-);
-
-// requirements (level 4) section of email
-const Requirements4 = () => (
   <>
     <b>———&nbsp; Requirements &nbsp;———</b>
     <br />
@@ -179,7 +156,7 @@ const Answers = (values) => {
     // convert to question (from page key) and answer (from formik values)
     .map(({ key }) => ({
       question: toTitleCase(key),
-      answer: [values[key]].flat().join(", "),
+      answer: [values[key]].flat().join("\n"),
     }))
     // remove blank answers
     .filter(({ answer }) => answer);
