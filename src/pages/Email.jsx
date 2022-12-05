@@ -4,7 +4,10 @@ import Textbox from "../components/Textbox";
 
 // email page
 const Component = () => (
-  <Page title="Your email address" description="So I can respond to you">
+  <Page
+    title="Your email address"
+    description="The form will send an automatic response to this address when you're done"
+  >
     <Textbox type="email" name={key} />
   </Page>
 );

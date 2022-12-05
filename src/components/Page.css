@@ -1,3 +1,13 @@
+.page {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 40px max(40px, calc((100% - var(--width) - 40px - 40px) / 2));
+}
+
 h2 {
   margin: 0;
   text-align: center;
@@ -8,18 +18,4 @@ h2 {
 
 .description {
   font-style: italic;
-}
-
-.error {
-  color: var(--red);
-  font-size: 0.85em;
-  font-style: italic;
-}
-
-.nav {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin: 20px 0;
 }

@@ -1,7 +1,7 @@
 import { useContext, useEffect } from "react";
 import { useFormikContext } from "formik";
 import { AppContext } from "../App";
-import { save } from "../persist";
+import { save } from "../util/persist";
 
 // controller for global form logic, e.g. validation
 const Controller = () => {
@@ -23,7 +23,9 @@ const Controller = () => {
   useEffect(() => {
     // automatically focus element of interest
     document.activeElement.blur();
-    document.querySelector("input, textarea, .next")?.focus();
+    document.querySelector("input, textarea")?.focus();
+    // scroll to top
+    window.scrollTo(0, 0);
   }, [page]);
 
   return null;

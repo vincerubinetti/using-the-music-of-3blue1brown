@@ -1,5 +1,5 @@
 import { renderToString } from "react-dom/server";
-import log from "../debug";
+import log from "../util/debug";
 import Message from "./Message";
 
 // form submission logic
@@ -10,7 +10,8 @@ export const submit = async (values) => {
   // render html string to be put in body of response email
   const message = renderToString(<Message level={level} values={values} />);
 
-  log(message);
+  log("HTML message", message);
+  log("Plain text message", htmlToPlain(message));
 
   // send email
   return sendEmail({ ...values, level, message });

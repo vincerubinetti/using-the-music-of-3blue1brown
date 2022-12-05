@@ -23,7 +23,7 @@ const Greeting = ({ name }) => (
     <br />
     <br />
     Thank you for answering how you want to use the music of 3Blue1Brown. For
-    your use case, here's what you need to do to use the music.
+    your use case, here’s what you need to do to use the music.
     <br />
     <br />
   </>
@@ -32,7 +32,7 @@ const Greeting = ({ name }) => (
 // requirements (level 1) section of email
 const Requirements1 = () => (
   <>
-    <b>———&nbsp; Requirements &nbsp;———</b>
+    <b>——— Requirements ———</b>
     <br />
     <br />
     In a visible spot such as the video description, put the following:
@@ -59,7 +59,7 @@ const Requirements1 = () => (
 // requirements (level 2) section of email
 const Requirements2 = () => (
   <>
-    <b>———&nbsp; Requirements &nbsp;———</b>
+    <b>——— Requirements ———</b>
     <br />
     <br />
     $50 USD <i>per song</i>, for one use
@@ -81,11 +81,11 @@ const Requirements2 = () => (
 // requirements (level 3) section of email
 const Requirements3 = () => (
   <>
-    <b>———&nbsp; Requirements &nbsp;———</b>
+    <b>——— Requirements ———</b>
     <br />
     <br />
-    For your use case, I couldn't automatically determine the requirements. I'll
-    have to personally take a look at your answers. If I don't get back to you
+    For your use case, I couldn’t automatically determine the requirements. I’ll
+    have to personally take a look at your answers. If I don’t get back to you
     within a couple of days, feel free to send me another email.
     <br />
     <br />
@@ -95,7 +95,7 @@ const Requirements3 = () => (
 // FAQ's section of email
 const Faqs = () => (
   <>
-    <b>———&nbsp; FAQ's &nbsp;———</b>
+    <b>——— FAQ’s ———</b>
     <br />
     <br />
     <b>Why all the requirements?</b>
@@ -163,7 +163,7 @@ const Answers = (values) => {
 
   return (
     <>
-      <b>———&nbsp; Your Answers &nbsp;———</b>
+      <b>——— Your Answers ———</b>
       <br />
       <br />
       {answers.map(({ question, answer }, index) => (
@@ -182,7 +182,7 @@ const Answers = (values) => {
 // thank you section of email
 const ThankYou = () => (
   <>
-    <b>———&nbsp; Thank You &nbsp;———</b>
+    <b>——— Thank You ———</b>
     <br />
     <br />
     I appreciate your interest in this music written for Grant’s wonderful

@@ -2,6 +2,7 @@ import { array } from "yup";
 import { FieldArray, useFormikContext } from "formik";
 import Page from "../components/Page";
 import Checkbox from "../components/Checkbox";
+import Grid from "../components/Grid";
 
 // list of songs
 const songs = [
@@ -33,7 +34,7 @@ const Component = () => {
 
   return (
     <Page title="Which songs do you want to use?">
-      <div className="check_grid">
+      <Grid>
         <FieldArray name={key}>
           {({ push, remove }) =>
             songs.map((song, index) => (
@@ -50,7 +51,19 @@ const Component = () => {
             ))
           }
         </FieldArray>
-      </div>
+      </Grid>
+
+      <p>
+        If you want to use music other than{" "}
+        <a href="https://vincerubinetti.bandcamp.com/album/the-music-of-3blue1brown">
+          The Music of 3Blue1Brown
+        </a>
+        , please contact me at{" "}
+        <a href="mailto:vince@vincentrubinetti.com">
+          vince@vincentrubinetti.com
+        </a>
+        .
+      </p>
     </Page>
   );
 };

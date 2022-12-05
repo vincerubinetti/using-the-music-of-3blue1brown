@@ -3,6 +3,9 @@ import "./Textbox.css";
 
 const Textbox = ({ type, name, multi = false }) => (
   <Field
+    aria-labelledby="label"
+    aria-describedby="description"
+    required={true}
     className="textbox"
     type={type}
     name={name}

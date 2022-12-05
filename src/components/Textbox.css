@@ -14,7 +14,6 @@
   transition: border-color var(--fast);
 }
 
-.textbox:hover,
-.textbox:focus {
+.textbox:is(:hover, :focus) {
   border-color: var(--blue);
 }

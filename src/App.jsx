@@ -1,10 +1,11 @@
 import { useState, createContext } from "react";
 import { Formik, Form } from "formik";
 import Controller from "./components/Controller";
+import Nav from "./components/Nav";
 import { pages, initialValues, validationSchema } from "./pages";
 import { submit } from "./submit/submit";
+import log from "./util/debug";
 import "./App.css";
-import log from "./debug";
 
 export const AppContext = createContext({});
 
@@ -39,7 +40,7 @@ const App = () => {
   };
 
   // get props of current page
-  const { Component = <></> } = pages[page];
+  const { Component: Page = <></> } = pages[page];
 
   return (
     <AppContext.Provider value={{ page, setPage, submitting, submitForm }}>
@@ -50,7 +51,8 @@ const App = () => {
       >
         <Form>
           <Controller />
-          <Component />
+          <Page />
+          <Nav />
         </Form>
       </Formik>
     </AppContext.Provider>

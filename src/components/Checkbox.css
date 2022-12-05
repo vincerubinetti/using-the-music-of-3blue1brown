@@ -9,8 +9,7 @@
   transition: background var(--fast);
 }
 
-.checkbox:hover,
-.checkbox:focus {
+.checkbox:is(:hover, :focus){
   background: var(--hollow);
 }
 
@@ -35,16 +34,4 @@
 .checkbox > span {
   margin-left: 15px;
   line-height: 1.25;
-}
-
-.check_grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 5px 20px;
-}
-
-@media (max-width: 500px) {
-  .check_grid {
-    grid-template-columns: 1fr;
-  }
 }

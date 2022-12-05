@@ -1,3 +1,4 @@
+// console log
 const log = (message, content) => {
   if (content) {
     console.groupCollapsed(message);

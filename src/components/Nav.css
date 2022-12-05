@@ -1,0 +1,50 @@
+.nav {
+  position: sticky;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  backdrop-filter: blur(100px) brightness(200%);
+  z-index: 10;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.error {
+  color: var(--red);
+  font-size: 0.85em;
+  font-style: italic;
+}
+
+.progress {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 5px;
+  background: var(--blue);
+  transition: width var(--fast);
+}
+
+.help {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  display: flex;
+  width: 20px;
+  color: #ffffffa0;
+  outline: none;
+}
+
+.help:is(:hover, :focus) {
+  color: var(--blue);
+}

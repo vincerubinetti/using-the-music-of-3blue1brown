@@ -16,8 +16,7 @@ button {
     opacity var(--fast);
 }
 
-button:not([disabled]):hover,
-button:not([disabled]):focus {
+button:not([disabled]):is(:is(:hover, :focus), :focus) {
   background: var(--blue);
   border-color: var(--blue);
 }

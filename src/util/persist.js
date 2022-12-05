@@ -1,7 +1,10 @@
 import log from "./debug";
+import packageJson from "../../package.json";
 
 // local storage key
-const key = "using-the-music-of-3blue1brown";
+const key = "using-the-music-of-3blue1brown-" + packageJson.version;
+
+log("Storage key", key);
 
 // load form state from storage
 export const load = () => {
