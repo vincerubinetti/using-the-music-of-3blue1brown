@@ -25,7 +25,7 @@ const Controller = () => {
     document.activeElement.blur();
     document.querySelector("input, textarea")?.focus();
     // scroll to top
-    window.scrollTo(0, 0);
+    window.setTimeout(() => window.scrollTo(0, 0), 500);
   }, [page]);
 
   return null;
