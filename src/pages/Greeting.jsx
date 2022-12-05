@@ -7,7 +7,7 @@ const Component = () => (
   <Page>
     <img src={cover} className="logo" alt="" />
     <h1>Using The Music of 3Blue1Brown</h1>
-    <p>In personal, educational, or professional projects</p>
+    <p>In personal, educational, or professional videos/projects</p>
   </Page>
 );
 

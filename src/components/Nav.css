@@ -9,7 +9,7 @@
   flex-direction: column;
   gap: 20px;
   padding: 20px;
-  backdrop-filter: blur(100px) brightness(200%);
+  backdrop-filter: blur(20px) brightness(200%);
   z-index: 10;
 }
 
