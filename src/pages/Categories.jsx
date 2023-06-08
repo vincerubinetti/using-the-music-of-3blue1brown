@@ -6,7 +6,7 @@ import Grid from "../components/Grid";
 
 // list of categories
 const categories = [
-  // "For the Summer of Math Exposition (SoME)",
+  "For the Summer of Math Exposition (SoME)",
   "In a school project or thesis, as a student",
   "In a classroom lesson, as a teacher",
   "In an online video, on YouTube, Instagram, Skillshare, etc.",
