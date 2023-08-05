@@ -4,7 +4,7 @@ import Page from "../components/Page";
 import Checkbox from "../components/Checkbox";
 
 // list of subscriber brackets
-const a = (10000).toLocaleString();
+const a = (100000).toLocaleString();
 const b = (500000).toLocaleString();
 const brackets = [`< ${a}`, `${a} to ${b}`, `> ${b}`];
 
