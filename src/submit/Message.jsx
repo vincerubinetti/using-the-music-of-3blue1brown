@@ -143,7 +143,7 @@ const toTitleCase = (string) =>
   string
     .replace(/([A-Z])/g, " $1")
     .split(/\s/)
-    .filter((word) => word)
+    .filter(Boolean)
     .map((word) => word.charAt(0).toUpperCase() + word.substring(1))
     .join(" ");
 
@@ -156,10 +156,11 @@ const Answers = (values) => {
     // convert to question (from page key) and answer (from formik values)
     .map(({ key }) => ({
       question: toTitleCase(key),
-      answer: [values[key]].flat().join("\n"),
-    }))
-    // remove blank answers
-    .filter(({ answer }) => answer);
+      answer: [values[key]]
+        .flat()
+        .map((line) => line.trim())
+        .filter(Boolean),
+    }));
 
   return (
     <>
@@ -170,7 +171,12 @@ const Answers = (values) => {
         <Fragment key={index}>
           <b>{question}</b>
           <br />
-          {answer}
+          {answer.map((line, index) => (
+            <Fragment key={index}>
+              {line}
+              <br />
+            </Fragment>
+          ))}
           <br />
           <br />
         </Fragment>

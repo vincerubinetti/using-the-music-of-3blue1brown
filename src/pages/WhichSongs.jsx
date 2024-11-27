@@ -25,6 +25,13 @@ const songs = [
   "Fractals",
   "Occlusion",
   "Fives",
+  "Transformation",
+  "Clarity",
+  "Memoir",
+  "Obsession",
+  "Banquet",
+  "Prison",
+  "The Night Before",
 ];
 
 // which songs page
