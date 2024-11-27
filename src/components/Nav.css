@@ -5,8 +5,8 @@
   flex-direction: column;
   gap: 20px;
   padding: 20px;
-  -webkit-backdrop-filter: blur(20px) brightness(200%);
-  backdrop-filter: blur(20px) brightness(200%);
+  -webkit-backdrop-filter: brightness(200%);
+  backdrop-filter: brightness(200%);
   z-index: 10;
 }
 

@@ -1,8 +1,8 @@
-import { array } from "yup";
 import { FieldArray, useFormikContext } from "formik";
-import Page from "../components/Page";
+import { array } from "yup";
 import Checkbox from "../components/Checkbox";
 import Grid from "../components/Grid";
+import Page from "../components/Page";
 
 // list of songs
 const songs = [
@@ -61,11 +61,7 @@ const Component = () => {
       </Grid>
 
       <p>
-        If you want to use music other than{" "}
-        <a href="https://vincerubinetti.bandcamp.com/album/the-music-of-3blue1brown">
-          The Music of 3Blue1Brown
-        </a>
-        , please contact me at{" "}
+        If the song you want to use isn't listed above, please contact me at{" "}
         <a href="mailto:vince@vincentrubinetti.com">
           vince@vincentrubinetti.com
         </a>
