@@ -42,11 +42,11 @@ const Requirements1 = () => (
     <br />
     Download the music on Bandcamp:
     <br />
-    https://vincerubinetti.bandcamp.com/album/the-music-of-3blue1brown
+    https://vincerubinetti.bandcamp.com
     <br />
     Stream the music on Spotify:
     <br />
-    https://open.spotify.com/playlist/3zNK20qC96mVSww60lVi1k
+    https://open.spotify.com/artist/2SRhEEt2tlDQWxzwfUo9Dl
     <br />
     <br />
     If you have any questions, reply to this message. If your use case ever
