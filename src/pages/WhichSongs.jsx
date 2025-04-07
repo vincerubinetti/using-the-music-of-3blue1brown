@@ -27,6 +27,8 @@ const songs = [
   "Fives",
   "Transformation",
   "Clarity",
+  "Focal Point",
+  "Fragments",
   "Gnomon",
   "Orbit",
   "Far Away",
