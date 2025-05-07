@@ -32,6 +32,7 @@ const songs = [
   "Gnomon",
   "Orbit",
   "Far Away",
+  "Quantum Blue",
   "Memoir",
   "Obsession",
   "Banquet",
