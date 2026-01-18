@@ -1,116 +1,58 @@
-import type { ComponentProps } from "react";
+import { Fragment } from "react";
 import clsx from "clsx";
+import { range } from "lodash";
 import styles from "./Background.module.css";
 
-/** width/height of grid in minor cells */
-const cells = 20;
+/** number of cells */
+const cells = 16;
 /** every this many minor cells becomes major */
 const major = 4;
 /** size of cell in svg units */
 const size = 50;
 
-/** grid boundary from origin */
-const bound = (cells * size) / 2;
+/** grid edge from origin */
+const radius = (cells * size) / 2;
+
+const lines = range(-cells * size, cells * size + 1, size);
 
 /** grid visualization */
 export default function Background() {
   return (
-    <div className="absolute inset-0 -z-10 opacity-10">
+    <div className="absolute inset-0 -z-10 overflow-hidden opacity-10">
       <svg
         className={clsx("absolute top-1/2 w-full", styles.svg)}
-        viewBox={`-${bound} -${bound} ${bound * 2} ${bound * 2}`}
+        viewBox={[-radius, -radius, radius * 2, radius * 2].join(" ")}
       >
-        <Minor />
-        <Major />
+        {lines.map((line, lineIndex) => (
+          <Fragment key={lineIndex}>
+            {(
+              [
+                ["x1", "x2", "y1", "y2"],
+                ["y1", "y2", "x1", "x2"],
+              ] as const
+            ).map(([x1, x2, y1, y2], directionIndex) => (
+              <line
+                key={directionIndex}
+                {...{
+                  [x1]: -radius,
+                  [x2]: radius,
+                  [y1]: line,
+                  [y2]: line,
+                }}
+                className={clsx(
+                  "fill-none [stroke-dasharray:1]",
+                  lineIndex % major === 0
+                    ? "stroke-sky-500 stroke-1"
+                    : "stroke-0.5 stroke-gray-500",
+                  styles.line,
+                )}
+                pathLength={1}
+                style={{ animationDelay: lineIndex / 5 + "s" }}
+              />
+            ))}
+          </Fragment>
+        ))}
       </svg>
     </div>
   );
 }
-
-/** grid line */
-const Line = (props: ComponentProps<"line"> & { index: number }) => (
-  <line
-    {...props}
-    className={clsx(props.className, styles.line)}
-    pathLength={1}
-    style={{
-      animationDelay: 2 + props.index / 20 + "s",
-    }}
-  />
-);
-
-/** minor grid lines */
-const Minor = () => {
-  const from = -cells / 2;
-  const to = cells / 2;
-  const h = [];
-  const v = [];
-
-  for (let index = from; index <= to; index++) {
-    h.push(
-      <Line
-        key={index}
-        index={index}
-        x1={index * size}
-        x2={index * size}
-        y1={-bound}
-        y2={bound}
-      />,
-    );
-    v.push(
-      <Line
-        key={index}
-        index={index}
-        x1={-bound}
-        x2={bound}
-        y1={index * size}
-        y2={index * size}
-      />,
-    );
-  }
-
-  return (
-    <g className="fill-none stroke-gray-500 stroke-1">
-      <g>{h}</g>
-      <g>{v}</g>
-    </g>
-  );
-};
-
-/** major grid lines */
-const Major = () => {
-  const from = -cells / major / 2;
-  const to = cells / major / 2;
-  const h = [];
-  const v = [];
-
-  for (let index = from; index <= to; index++) {
-    h.push(
-      <Line
-        key={index}
-        index={index}
-        x1={major * index * size}
-        x2={major * index * size}
-        y1={-bound}
-        y2={bound}
-      />,
-    );
-    v.push(
-      <Line
-        key={index}
-        index={index}
-        x1={-bound}
-        x2={bound}
-        y1={major * index * size}
-        y2={major * index * size}
-      />,
-    );
-  }
-
-  return (
-    <g className="fill-none stroke-sky-500 stroke-2">
-      <g>{h}</g>
-      <g>{v}</g>
-    </g>
-  );
-};

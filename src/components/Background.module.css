@@ -1,10 +1,9 @@
 .svg {
-  animation: rotate-grid 120s linear forwards infinite;
+  animation: rotate-grid 120s linear both infinite;
 }
 
 .line {
-  stroke-dasharray: 1;
-  animation: draw-line 15s ease-in-out forwards infinite;
+  animation: draw-line 15s ease-in-out both infinite;
 }
 
 @keyframes rotate-grid {
@@ -19,9 +18,9 @@
 
 @keyframes draw-line {
   0% {
-    stroke-dashoffset: 2;
+    stroke-dashoffset: 3;
   }
   100% {
-    stroke-dashoffset: 0;
+    stroke-dashoffset: 1;
   }
 }

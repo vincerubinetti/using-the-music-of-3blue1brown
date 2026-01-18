@@ -1,5 +1,7 @@
 name: Deploy
 
+# based on https://github.com/actions/starter-workflows/blob/main/pages/static.yml
+
 on:
   push:
     branches:
