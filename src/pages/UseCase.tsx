@@ -18,7 +18,11 @@ export const Component = () => {
         </>
       }
     >
-      <textarea {...register(key)} className="w-full" />
+      <textarea
+        {...register(key)}
+        className="w-full"
+        placeholder="Describe your use case"
+      />
     </Page>
   );
 };

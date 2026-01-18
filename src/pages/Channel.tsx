@@ -8,7 +8,7 @@ export const Component = () => {
 
   return (
     <Page title="Your channel/user name">
-      <input {...register(key)} placeholder="Your Name" />
+      <input {...register(key)} placeholder="Your channel/user name" />
     </Page>
   );
 };

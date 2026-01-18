@@ -8,7 +8,7 @@ export const Component = () => {
 
   return (
     <Page title="Your full name" description="So I can properly address you">
-      <input {...register(key)} placeholder="Your Name" />
+      <input {...register(key)} placeholder="Your name" />
     </Page>
   );
 };
