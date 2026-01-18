@@ -15,12 +15,7 @@ import type { Schema } from "@/pages";
 export default function Nav() {
   const { formState, getFieldState, trigger, watch } = useFormContext<Schema>();
 
-  /** trigger revalidation on any re-render */
-  useEffect(() => {
-    trigger();
-  }, [trigger]);
-
-  /** full state */
+  /** full form data */
   console.debug(watch());
 
   /** current page number */
@@ -53,6 +48,11 @@ export default function Nav() {
 
   /** percent complete */
   const progress = pageNumber / submitPage;
+
+  /** revalidate on page change */
+  useEffect(() => {
+    trigger();
+  }, [pageNumber, trigger]);
 
   return (
     <footer>

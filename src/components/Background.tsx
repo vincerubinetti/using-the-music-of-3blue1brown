@@ -42,8 +42,8 @@ export default function Background() {
                 className={clsx(
                   "fill-none [stroke-dasharray:1]",
                   lineIndex % major === 0
-                    ? "stroke-2 stroke-sky-500"
-                    : "stroke-1 stroke-gray-500",
+                    ? "stroke-sky-500 stroke-2"
+                    : "stroke-gray-500 stroke-1",
                   styles.line,
                 )}
                 pathLength={1}
