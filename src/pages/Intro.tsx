@@ -17,8 +17,6 @@ export const Component = () => {
         <i>It only takes a minute.</i>
       </p>
 
-      <hr />
-
       <h2>I just want to listen to the music</h2>
       <p>
         Then you don’t need this form! Just stream or download the music{" "}

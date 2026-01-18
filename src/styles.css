@@ -60,10 +60,6 @@
     @apply pl-2;
   }
 
-  hr {
-    @apply my-8 h-px w-full border-none bg-gray-700;
-  }
-
   button {
     @apply flex min-w-40 cursor-pointer items-center justify-center gap-2 rounded border border-white p-4 tracking-wide uppercase transition-colors hover:border-sky-500 hover:bg-sky-500;
   }
