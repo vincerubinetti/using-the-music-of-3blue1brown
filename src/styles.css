@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Lora Variable", serif;
+  --radius: --spacing(2);
+}
+
+@layer components {
+  * {
+    @apply outline-offset-4 outline-sky-500;
+
+    :focus-visible {
+      @apply outline;
+    }
+  }
+
+  html {
+    @apply font-serif;
+  }
+
+  body {
+    @apply flex min-h-dvh flex-col bg-gray-900 text-center font-serif leading-none text-white;
+  }
+
+  #root {
+    @apply contents;
+  }
+
+  main {
+    --width: --spacing(200);
+    @apply flex grow flex-col items-center justify-center-safe gap-8 p-8 px-[max(--spacing(12),(100%-var(--width))/2)] py-8;
+  }
+
+  footer {
+    @apply sticky bottom-0 flex w-full flex-col flex-wrap items-center justify-center gap-4 bg-gray-800 p-4;
+  }
+
+  h1 {
+    @apply text-2xl tracking-wide;
+  }
+
+  h2 {
+    @apply text-2xl tracking-wide;
+  }
+
+  a {
+    @apply text-sky-400 underline underline-offset-2 transition-colors hover:text-current;
+  }
+
+  p {
+    @apply leading-loose text-balance text-gray-400;
+  }
+
+  ol,
+  ul {
+    @apply list-[revert] text-left leading-loose;
+  }
+
+  li {
+    @apply pl-2;
+  }
+
+  hr {
+    @apply my-8 h-px w-full border-none bg-gray-700;
+  }
+
+  button {
+    @apply flex min-w-40 cursor-pointer items-center justify-center gap-2 rounded border border-white p-4 tracking-wide uppercase transition-colors hover:border-sky-500 hover:bg-sky-500;
+  }
+
+  input:not([type="checkbox"]):not([type="radio"]) {
+    @apply border-b border-white bg-gray-800 p-4 transition-colors hover:border-sky-500;
+  }
+
+  textarea {
+    @apply max-h-full min-h-[calc(3lh+--spacing(8))] max-w-full resize border-b border-white bg-gray-800 p-4 leading-loose transition-colors hover:border-sky-500;
+  }
+
+  [aria-disabled="true"] {
+    @apply cursor-not-allowed opacity-50;
+  }
+
+  .lucide {
+    width: unset;
+    height: 1em;
+  }
+}

@@ -1,31 +1,47 @@
 {
-  "name": "using-the-music-of-3blue1brown",
-  "version": "1.0.0",
-  "homepage": "https://vincerubinetti.github.io/using-the-music-of-3blue1brown/",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --open",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "eslint . --fix",
+    "format": "prettier --write src/",
+    "test:types": "tsc -b",
+    "test:lint": "eslint .",
+    "test:format": "prettier --check src/",
+    "test": "bun run test:types && bun run test:lint && bun run test:format"
   },
   "dependencies": {
-    "formik": "^2.2.9",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "vite-plugin-svgr": "^2.2.2",
-    "yup": "^0.32.11"
+    "@base-ui/react": "^1.1.0",
+    "@fontsource-variable/lora": "^5.2.8",
+    "@reactuses/core": "^6.1.5",
+    "@tailwindcss/vite": "^4.1.17",
+    "clsx": "^2.1.1",
+    "jotai": "^2.16.2",
+    "lodash": "^4.17.21",
+    "lucide-react": "^0.554.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-hook-form": "^7.71.1",
+    "tailwindcss": "^4.1.17"
   },
   "devDependencies": {
-    "@types/react": "^18.0.26",
-    "@types/react-dom": "^18.0.9",
-    "@vitejs/plugin-react": "^2.2.0",
-    "eslint": "^8.29.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-jsx-a11y": "^6.6.1",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-react": "^7.31.11",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "prettier": "^2.8.0",
-    "vite": "^3.2.4"
+    "@eslint/js": "^9.39.1",
+    "@ianvs/prettier-plugin-sort-imports": "^4.7.0",
+    "@types/lodash": "^4.17.20",
+    "@types/node": "^24.10.0",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "@vitejs/plugin-react": "^5.1.0",
+    "eslint": "^9.39.1",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.24",
+    "globals": "^16.5.0",
+    "postcss": "^8.5.6",
+    "prettier": "^3.6.2",
+    "prettier-plugin-tailwindcss": "^0.7.1",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.46.3",
+    "vite": "^7.2.2"
   }
 }

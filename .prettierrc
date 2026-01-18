@@ -1,0 +1,18 @@
+{
+  "plugins": [
+    "@ianvs/prettier-plugin-sort-imports",
+    "prettier-plugin-tailwindcss"
+  ],
+  "importOrder": [
+    "^react",
+    "^@[a-zA-Z]",
+    "^[a-zA-Z]",
+    "^@/",
+    "^/",
+    "^./",
+    "^../"
+  ],
+  "importOrderParserPlugins": ["typescript", "jsx", "importAssertions"],
+  "htmlWhitespaceSensitivity": "strict",
+  "tailwindFunctions": ["clsx"]
+}

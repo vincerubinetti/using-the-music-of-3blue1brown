@@ -1,17 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-US">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Using the music of 3Blue1Brown</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="icon" type="image/png" sizes="512x512" href="favicon.png" />
+    <!-- basic -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+    <!-- favicons -->
+    <link rel="icon" type="image/png" href="icon.png" />
+
+    <!-- basic -->
+    <title>%VITE_TITLE%</title>
+    <meta name="title" content="%VITE_TITLE%" />
+    <meta name="description" content="%VITE_DESCRIPTION%" />
+
+    <!-- open graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="%VITE_URL%" />
+    <meta property="og:title" content="%VITE_TITLE%" />
+    <meta property="og:description" content="%VITE_DESCRIPTION%" />
+    <meta property="og:image" content="share.png" />
   </head>
+
   <body>
+    <noscript>
+      Sorry, this website doesn't work without JavaScript enabled.
+    </noscript>
+
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

@@ -4,21 +4,46 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v2
+
       - name: Install packages
-        run: yarn install
-      - name: Build app
-        run: yarn build
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+        run: bun install
+
+      - name: Build
+        run: bun run build
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v4
         with:
-          keep_files: false
-          publish_branch: gh-pages
-          publish_dir: dist
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          path: "dist"
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
