@@ -14,7 +14,7 @@ import {
   updateFollowup,
 } from "@/pages";
 import type { Schema } from "@/pages";
-import { submit } from "@/submit/submit/submit";
+import { submit } from "@/submit/submit";
 
 export default function App() {
   /** react-hook-form controller */
@@ -31,6 +31,7 @@ export default function App() {
   useFormPersist(methods);
 
   /** update followup questions based on response in categories question */
+  // eslint-disable-next-line react-hooks/incompatible-library
   const categories = methods.watch("categories");
   useEffect(() => {
     updateFollowup(categories);
