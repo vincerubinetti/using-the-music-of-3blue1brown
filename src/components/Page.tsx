@@ -17,6 +17,12 @@ export default function Page({ title, description, children }: Props) {
         description
       )}
       {children}
+      <a
+        className="absolute top-2 right-2"
+        href="mailto:vince@vincentrubinetti.com"
+      >
+        Help
+      </a>
     </>
   );
 }

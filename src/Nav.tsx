@@ -67,7 +67,7 @@ export default function Nav() {
         </p>
       )}
 
-      <div className="flex flex-wrap gap-4">
+      <div className="flex flex-wrap items-center justify-center gap-4">
         {!onFirstPage && !onLastPage && (
           <button
             type="button"
@@ -117,13 +117,6 @@ export default function Nav() {
           </button>
         )}
       </div>
-
-      <a
-        className="absolute right-2 bottom-2"
-        href="mailto:vince@vincentrubinetti.com"
-      >
-        Help
-      </a>
     </footer>
   );
 }

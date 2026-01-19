@@ -48,12 +48,12 @@
   }
 
   p {
-    @apply leading-loose text-balance text-gray-400;
+    @apply leading-relaxed text-balance text-gray-300;
   }
 
   ol,
   ul {
-    @apply list-[revert] text-left leading-loose;
+    @apply list-[revert] text-left leading-relaxed;
   }
 
   li {
@@ -69,7 +69,7 @@
   }
 
   textarea {
-    @apply max-h-full min-h-[calc(3lh+--spacing(8))] max-w-full resize border-b border-white bg-gray-800 p-4 leading-loose transition-colors hover:border-sky-500;
+    @apply max-h-full min-h-[calc(3lh+--spacing(8))] max-w-full resize border-b border-white bg-gray-800 p-4 leading-relaxed transition-colors hover:border-sky-500;
   }
 
   [aria-disabled="true"] {
