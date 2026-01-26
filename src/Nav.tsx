@@ -13,10 +13,7 @@ import type { Schema } from "@/pages";
 
 /** form navigation controls */
 export default function Nav() {
-  const { formState, getFieldState, trigger, watch } = useFormContext<Schema>();
-
-  /** full form data */
-  console.debug(watch());
+  const { formState, getFieldState, trigger } = useFormContext<Schema>();
 
   /** current page number */
   const pageNumber = useAtomValue(pageNumberAtom);
@@ -61,8 +58,8 @@ export default function Nav() {
         style={{ clipPath: `inset(0 ${(1 - progress) * 100}% 0 0)` }}
       />
 
-      {error && state?.isDirty && (
-        <p className="text-red-300" role="alert">
+      {error && (
+        <p className="text-gray-300" role="alert">
           {String(error.message)}
         </p>
       )}

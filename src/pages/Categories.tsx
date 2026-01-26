@@ -44,6 +44,6 @@ export const key = "categories";
 
 export const schema = z
   .array(z.enum(categories))
-  .min(1, "Select at least one category");
+  .min(1, "Please select at least one category");
 
 export const defaultValue = [];

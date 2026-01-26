@@ -60,4 +60,6 @@ export const key = "whichSongs";
 
 export const defaultValue = [];
 
-export const schema = z.array(z.enum(songs)).min(1, "Select at least one song");
+export const schema = z
+  .array(z.enum(songs))
+  .min(1, "Please select at least one song");

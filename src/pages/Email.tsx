@@ -20,4 +20,4 @@ export const key = "email";
 
 export const defaultValue = "";
 
-export const schema = z.email("Invalid email");
+export const schema = z.email("Please enter a valid email");

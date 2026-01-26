@@ -28,20 +28,18 @@ export const pages = [
 ] as const;
 
 /** form schema */
-export const schema = () => {
-  const followup = getDefaultStore().get(followupAtom);
-  return z.object({
+export const schema = (followup = true) =>
+  z.object({
     [Email.key]: Email.schema,
     [Name.key]: Name.schema,
     [WhichSongs.key]: WhichSongs.schema,
     [UseCase.key]: UseCase.schema,
     [Categories.key]: Categories.schema,
-    [Channel.key]: followup ? Channel.schema : Channel.schema.optional(),
+    [Channel.key]: followup ? Channel.schema : z.string().or(z.undefined()),
     [Subscribers.key]: followup
       ? Subscribers.schema
-      : Subscribers.schema.optional(),
+      : z.string().or(z.undefined()),
   });
-};
 
 /** form schema type */
 export type Schema = z.infer<ReturnType<typeof schema>>;

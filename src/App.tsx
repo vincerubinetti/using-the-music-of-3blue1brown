@@ -7,6 +7,7 @@ import { debounce } from "lodash";
 import Background from "@/components/Background";
 import Nav from "@/Nav";
 import {
+  followupAtom,
   lastPage,
   pageNumberAtom,
   pages,
@@ -20,7 +21,7 @@ export default function App() {
   /** react-hook-form controller */
   const methods = useForm<Schema>({
     mode: "all",
-    resolver: zodResolver(schema()),
+    resolver: zodResolver(schema(useAtomValue(followupAtom))),
     defaultValues: Object.fromEntries(
       pages
         .filter((page) => "key" in page && "defaultValue" in page)

@@ -72,7 +72,10 @@ export const sendEmail = async ({
 
   try {
     /** fake success when testing locally */
-    if (import.meta.env.MODE === "development") return true;
+    if (import.meta.env.MODE === "development") {
+      console.debug("Dev mode, skipping email send");
+      return true;
+    }
 
     /** make request */
     const response = await (await fetch(emailSender, options)).text();
