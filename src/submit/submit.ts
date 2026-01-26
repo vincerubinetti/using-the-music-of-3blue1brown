@@ -22,8 +22,8 @@ export const getLevel = ({ categories, subscribers }: Schema) => {
     if (category.includes("student")) return 1;
     if (category.includes("teacher")) return 1;
     if (category.includes("video")) {
-      if (subscribers.includes("<")) return 1;
-      if (subscribers.includes("to")) return 2;
+      if (subscribers?.includes("<")) return 1;
+      if (subscribers?.includes("to")) return 2;
       return 3;
     }
     if (category.includes("company")) return 2;

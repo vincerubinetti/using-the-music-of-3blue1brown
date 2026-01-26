@@ -149,7 +149,7 @@ const Answers = (data: Schema) => {
       question: toTitleCase(key),
       answer: [data[key]]
         .flat()
-        .map((line) => line.trim())
+        .map((line) => line?.trim() ?? "")
         .filter(Boolean),
     }));
 
