@@ -36,8 +36,10 @@ export const schema = () => {
     [WhichSongs.key]: WhichSongs.schema,
     [UseCase.key]: UseCase.schema,
     [Categories.key]: Categories.schema,
-    [Channel.key]: followup ? Channel.schema : z.undefined(),
-    [Subscribers.key]: followup ? Subscribers.schema : z.undefined(),
+    [Channel.key]: followup ? Channel.schema : Channel.schema.optional(),
+    [Subscribers.key]: followup
+      ? Subscribers.schema
+      : Subscribers.schema.optional(),
   });
 };
 
