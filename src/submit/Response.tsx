@@ -125,10 +125,10 @@ const Faqs = () => (
     smaller creators who are just starting out. My intent is that if you fall
     under a category that has a fee, you’re in a situation where you can afford
     it. You can take a look at what typical fees are on popular stock music
-    sites like Premium Beat, The Music Case, and Hook Sounds. There is also a
-    wealth of free, Creative Commons-licensed music of all genres and styles
-    available on the Internet. I’m happy to make specific recommendations if you
-    need them.
+    sites like Premium Beat, The Music Case, Hook Sounds, APM Music, and more.
+    There is also a wealth of free, Creative Commons-licensed music of all
+    genres and styles available on the Internet. I’m happy to make specific
+    recommendations if you need them.
     <br />
     <br />
   </>
