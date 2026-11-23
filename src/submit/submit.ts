@@ -15,7 +15,7 @@ export const submit = async (data: Schema) => {
   return sendEmail({ ...data, level, message });
 };
 
-// determine "level" of use based on form answers
+/** determine "level" of use based on form answers */
 export const getLevel = ({ categories, subscribers }: Schema) => {
   const evaluateCategory = (category: Schema["categories"][number]) => {
     if (category.includes("SoME")) return 1;
