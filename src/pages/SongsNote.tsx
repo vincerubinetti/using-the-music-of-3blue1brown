@@ -8,9 +8,9 @@ export const Component = () => {
       </p>
       <ol>
         <li>One, Two, Zeta</li>
-        <li>Grant’s Etude</li>
-        <li>Grant’s New Etude</li>
-        <li>Grant’s Opus</li>
+        <li>Basis (formerly Grant’s Etude)</li>
+        <li>Basis Vector (formerly Grant’s New Etude)</li>
+        <li>Nudges (formerly Grant’s Opus)</li>
       </ol>
       <p>
         because I am not the sole composer of them and can’t give out permission
