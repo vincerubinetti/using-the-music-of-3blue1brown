@@ -1,3 +1,4 @@
+import type { Schema } from "@/pages";
 import { useEffect } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -14,7 +15,6 @@ import {
   schema,
   updateFollowup,
 } from "@/pages";
-import type { Schema } from "@/pages";
 import { submit } from "@/submit/submit";
 
 export default function App() {
@@ -45,7 +45,7 @@ export default function App() {
       lastPage();
     } else
       /** error */
-      alert(
+      window.alert(
         "Sorry, there was an issue sending your email. Please try again or contact me directly at vince@vincentrubinetti.com",
       );
   };
@@ -62,6 +62,7 @@ export default function App() {
         <form className="contents" onSubmit={methods.handleSubmit(onSubmit)}>
           <main
             className={clsx(
+              page && "className" in page && page.className,
               methods.formState.isSubmitting &&
                 "pointer-events-none opacity-50 grayscale",
             )}

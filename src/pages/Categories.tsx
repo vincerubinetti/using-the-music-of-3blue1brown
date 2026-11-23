@@ -1,14 +1,14 @@
+import type { Schema } from "@/pages";
 import { useFormContext } from "react-hook-form";
 import z from "zod";
 import Checkbox from "@/components/Checkbox";
 import Page from "@/components/Page";
-import type { Schema } from "@/pages";
 
 const categories = [
-  "For the Summer of Math Exposition (SoME)",
+  "In an online video, on YouTube, Instagram, Skillshare, etc.",
   "In a school project or thesis, as a student",
   "In a classroom lesson, as a teacher",
-  "In an online video, on YouTube, Instagram, Skillshare, etc.",
+  "For the Summer of Math Exposition (SoME)",
   "In an internal production, as a company",
   "In an online advertisement or promo",
   "In a live performance or broadcast",

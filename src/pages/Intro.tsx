@@ -17,6 +17,17 @@ export const Component = () => {
         <i>It only takes a minute.</i>
       </p>
 
+      <hr />
+
+      <h2>Should you really use this music?</h2>
+      <p>
+        If you're a new creator, we recommend that you focus on finding your own
+        unique style and voice rather than imitating someone else's. We think
+        that will help you more in the long run.
+      </p>
+
+      <hr />
+
       <h2>I just want to listen to the music</h2>
       <p>
         Then you don’t need this form! Just stream or download the music{" "}
@@ -28,3 +39,5 @@ export const Component = () => {
     </Page>
   );
 };
+
+export const className = "items-stretch **:text-left **:text-wrap";

@@ -8,14 +8,6 @@
 @layer components {
   * {
     @apply outline-offset-4 outline-sky-500;
-
-    :focus-visible {
-      @apply outline;
-    }
-  }
-
-  html {
-    @apply font-serif;
   }
 
   body {
@@ -27,8 +19,16 @@
   }
 
   main {
-    --width: --spacing(200);
-    @apply flex grow flex-col items-center justify-center-safe gap-8 p-8 px-[max(--spacing(12),(100%-var(--width))/2)] py-8;
+    --width: 150;
+    @apply flex grow flex-col items-center justify-center-safe gap-8 p-8 px-[max(--spacing(12),(100%---spacing(var(--width)))/2)] py-8;
+  }
+
+  .width-sm {
+    --width: 100;
+  }
+
+  .width-lg {
+    --width: 200;
   }
 
   footer {
@@ -43,12 +43,16 @@
     @apply text-2xl tracking-wide;
   }
 
+  hr {
+    @apply border-t border-gray-700;
+  }
+
   a {
     @apply text-sky-400 underline underline-offset-2 transition-colors hover:text-current;
   }
 
   p {
-    @apply leading-relaxed text-balance text-gray-300;
+    @apply leading-relaxed text-balance;
   }
 
   ol,
@@ -57,7 +61,7 @@
   }
 
   li {
-    @apply pl-2;
+    @apply ml-8 pl-4;
   }
 
   button {
@@ -79,5 +83,9 @@
   .lucide {
     width: unset;
     height: 1em;
+  }
+
+  :focus-visible {
+    @apply outline;
   }
 }

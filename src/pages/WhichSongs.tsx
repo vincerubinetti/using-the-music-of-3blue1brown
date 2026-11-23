@@ -1,8 +1,8 @@
+import type { Schema } from "@/pages";
 import { useFormContext } from "react-hook-form";
 import z from "zod";
 import Checkbox from "@/components/Checkbox";
 import Page from "@/components/Page";
-import type { Schema } from "@/pages";
 
 const songs = [
   "Zeta",
@@ -42,13 +42,12 @@ const songs = [
   "The Night Before",
 ] as const;
 
-// which songs page
 export const Component = () => {
   const { register } = useFormContext<Schema>();
 
   return (
     <Page title="Which songs do you want to use?">
-      <div className="grid w-full auto-rows-fr grid-cols-[repeat(auto-fit,minmax(--spacing(46),1fr))] place-content-center gap-2">
+      <div className="grid grid-cols-[repeat(auto-fit,minmax(--spacing(60),auto))] gap-2 self-stretch">
         {songs.map((song, index) => (
           <Checkbox key={index} value={song} type="checkbox" {...register(key)}>
             {song}
@@ -66,3 +65,5 @@ export const defaultValue = [];
 export const schema = z
   .array(z.enum(songs))
   .min(1, "Please select at least one song");
+
+export const className = "width-lg";

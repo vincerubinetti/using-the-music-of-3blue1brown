@@ -1,18 +1,37 @@
 {
-  "plugins": [
-    "@ianvs/prettier-plugin-sort-imports",
-    "prettier-plugin-tailwindcss"
-  ],
-  "importOrder": [
-    "^react",
-    "^@[a-zA-Z]",
-    "^[a-zA-Z]",
-    "^@/",
-    "^/",
-    "^./",
-    "^../"
-  ],
-  "importOrderParserPlugins": ["typescript", "jsx", "importAssertions"],
   "htmlWhitespaceSensitivity": "strict",
-  "tailwindFunctions": ["clsx"]
+  "overrides": [
+    {
+      "files": "*.css",
+      "options": {
+        "plugins": ["prettier-plugin-tailwindcss"],
+        "tailwindStylesheet": "./src/styles.css"
+      }
+    },
+    {
+      "files": "*",
+      "excludeFiles": "*.css",
+      "options": {
+        "plugins": ["@ianvs/prettier-plugin-sort-imports"],
+        "importOrder": [
+          "<TYPES>^react",
+          "<TYPES>^@[a-zA-Z]",
+          "<TYPES>^[a-zA-Z]",
+          "<TYPES>^@/",
+          "<TYPES>^/",
+          "<TYPES>^./",
+          "<TYPES>^../",
+          "<TYPES>",
+          "^react",
+          "^@[a-zA-Z]",
+          "^[a-zA-Z]",
+          "^@/",
+          "^/",
+          "^./",
+          "^../"
+        ],
+        "importOrderParserPlugins": ["typescript", "jsx", "importAssertions"]
+      }
+    }
+  ]
 }

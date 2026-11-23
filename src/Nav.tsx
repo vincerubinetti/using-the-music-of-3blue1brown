@@ -1,3 +1,4 @@
+import type { Schema } from "@/pages";
 import { useEffect } from "react";
 import { useFormContext } from "react-hook-form";
 import { useAtomValue } from "jotai";
@@ -9,7 +10,6 @@ import {
   pages,
   previousPage,
 } from "@/pages";
-import type { Schema } from "@/pages";
 
 /** form navigation controls */
 export default function Nav() {

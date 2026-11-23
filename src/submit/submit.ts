@@ -1,5 +1,5 @@
-import { renderToString } from "react-dom/server";
 import type { Schema } from "@/pages";
+import { renderToString } from "react-dom/server";
 import Response from "./Response";
 
 /** submit form */

@@ -8,3 +8,5 @@ export const Component = () => (
     </p>
   </Page>
 );
+
+export const className = "width-sm";

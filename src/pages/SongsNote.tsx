@@ -22,3 +22,5 @@ export const Component = () => {
     </Page>
   );
 };
+
+export const className = "items-stretch **:text-left **:text-wrap";

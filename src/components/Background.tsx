@@ -18,7 +18,7 @@ const lines = range(-cells * size, cells * size + 1, size);
 /** grid visualization */
 export default function Background() {
   return (
-    <div className="absolute inset-0 -z-10 overflow-hidden opacity-15">
+    <div className="absolute inset-0 -z-10 overflow-hidden mask-[radial-gradient(circle_at_center,#0000,#0008)]">
       <svg
         className={clsx("absolute top-1/2 w-full", styles.svg)}
         viewBox={[-radius, -radius, radius * 2, radius * 2].join(" ")}
@@ -42,7 +42,7 @@ export default function Background() {
                 className={clsx(
                   "fill-none [stroke-dasharray:1]",
                   lineIndex % major === 0
-                    ? "stroke-sky-500 stroke-2"
+                    ? "stroke-sky-600 stroke-2"
                     : "stroke-gray-500 stroke-1",
                   styles.line,
                 )}

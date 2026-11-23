@@ -1,6 +1,6 @@
+import type { Schema } from "@/pages";
 import { Fragment } from "react";
 import { pages } from "@/pages";
-import type { Schema } from "@/pages";
 
 /** generate html email response */
 const Response = ({ level, data }: { level: number; data: Schema }) => (

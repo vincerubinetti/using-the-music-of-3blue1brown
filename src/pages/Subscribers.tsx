@@ -38,3 +38,5 @@ export const key = "subscribers";
 export const initialValue = "";
 
 export const schema = z.enum(brackets, "Please select an option");
+
+export const className = "width-sm";

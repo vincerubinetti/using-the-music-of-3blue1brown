@@ -10,7 +10,7 @@ type Props = {
 export default function Page({ title, description, children }: Props) {
   return (
     <>
-      {title && <h1>{title}</h1>}
+      {title && <h1 className="text-balance">{title}</h1>}
       {description && typeof description === "string" ? (
         <p>{description}</p>
       ) : (
